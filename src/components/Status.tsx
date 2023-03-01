@@ -1,6 +1,5 @@
 import { observer } from "mobx-react-lite";
 import { game } from "../game";
-import { useGameDuration } from "../hooks/useGameDuration";
 import { ControlButton } from "./ControlButton";
 import { Count } from "./Count";
 import styles from "./Status.module.css";

@@ -199,7 +199,7 @@ export class Game {
 	private countMines(grid: IGrid, x: number, y: number): number {
 		let mines = 0;
 
-		for (const [cell, dx, dy] of Game.iterNeighbors(grid, x, y)) {
+		for (const [cell] of Game.iterNeighbors(grid, x, y)) {
 			if (cell.isMine) {
 				mines++;
 			}

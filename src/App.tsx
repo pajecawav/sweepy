@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Field } from "./components/Field";
 import { Status } from "./components/Status";
 

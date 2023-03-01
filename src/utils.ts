@@ -1,4 +1,4 @@
-export function cn(...values: any[]): string {
+export function cn(...values: (string | boolean | number | null | undefined)[]): string {
 	return values.filter(value => typeof value === "string" && value).join(" ");
 }
 
