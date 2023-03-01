@@ -1,0 +1,32 @@
+:root {
+	--sprite-digit-1: -0px 0;
+	--sprite-digit-2: -14px 0;
+	--sprite-digit-3: -28px 0;
+	--sprite-digit-4: -42px 0;
+	--sprite-digit-5: -56px 0;
+	--sprite-digit-6: -70px 0;
+	--sprite-digit-7: -84px 0;
+	--sprite-digit-8: -98px 0;
+	--sprite-digit-9: -112px 0;
+	--sprite-digit-0: -126px 0;
+
+	--sprite-smile: 0 -24px;
+	--sprite-smile-wow: -54px -24px;
+	--sprite-smile-cool: -81px -24px;
+	--sprite-smile-dead: -108px -24px;
+
+	--sprite-cell-hidden: 0 -51px;
+	--sprite-cell-flagged: -34px -51px;
+	--sprite-cell-flaggedInvalid: -119px -51px;
+	--sprite-cell-mine: -85px -51px;
+	--sprite-cell-mine-final: -102px -51px;
+	--sprite-cell-mine-0: -17px -51px;
+	--sprite-cell-mine-1: -0px -68px;
+	--sprite-cell-mine-2: -17px -68px;
+	--sprite-cell-mine-3: -34px -68px;
+	--sprite-cell-mine-4: -51px -68px;
+	--sprite-cell-mine-5: -68px -68px;
+	--sprite-cell-mine-6: -85px -68px;
+	--sprite-cell-mine-7: -102px -68px;
+	--sprite-cell-mine-8: -119px -68px;
+}

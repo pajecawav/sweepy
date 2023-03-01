@@ -4,17 +4,17 @@
 	background-image: url("/sprite.png");
 	overflow: hidden;
 
-	background-position: 0 -24px;
+	background-position: var(--sprite-smile);
 }
 
 .button:active {
-	background-position: -54px -24px;
+	background-position: var(--sprite-smile-wow);
 }
 
 .button__completed {
-	background-position: -81px -24px;
+	background-position: var(--sprite-smile-cool);
 }
 
 .button__failed {
-	background-position: -108px -24px;
+	background-position: var(--sprite-smile-dead);
 }

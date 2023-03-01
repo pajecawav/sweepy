@@ -1,62 +1,62 @@
 .cell {
-	aspect-ratio: 1 / 1;
 	width: 16px;
+	height: 16px;
 	background: url("/sprite.png");
 	overflow: hidden;
 }
 
 .cell__hidden {
-	background-position: 0 -51px;
+	background-position: var(--sprite-cell-hidden);
 }
 
 .cell__flagged {
-	background-position: -34px -51px;
+	background-position: var(--sprite-cell-flagged);
 }
 
 .cell__flaggedInvalid {
-	background-position: -119px -51px;
+	background-position: var(--sprite-cell-flaggedInvalid);
 }
 
 .cell__mine {
-	background-position: -85px -51px;
+	background-position: var(--sprite-cell-mine);
 }
 
 .cell__final {
-	background-position: -102px -51px;
+	background-position: var(--sprite-cell-mine-final);
 }
 
 .cell__revealed[data-mines="0"] {
-	background-position: -17px -51px;
+	background-position: var(--sprite-cell-mine-0);
 }
 
 .cell__revealed[data-mines="1"] {
-	background-position: -0px -68px;
+	background-position: var(--sprite-cell-mine-1);
 }
 
 .cell__revealed[data-mines="2"] {
-	background-position: -17px -68px;
+	background-position: var(--sprite-cell-mine-2);
 }
 
 .cell__revealed[data-mines="3"] {
-	background-position: -34px -68px;
+	background-position: var(--sprite-cell-mine-3);
 }
 
 .cell__revealed[data-mines="4"] {
-	background-position: -51px -68px;
+	background-position: var(--sprite-cell-mine-4);
 }
 
 .cell__revealed[data-mines="5"] {
-	background-position: -68px -68px;
+	background-position: var(--sprite-cell-mine-5);
 }
 
 .cell__revealed[data-mines="6"] {
-	background-position: -85px -68px;
+	background-position: var(--sprite-cell-mine-6);
 }
 
 .cell__revealed[data-mines="7"] {
-	background-position: -102px -68px;
+	background-position: var(--sprite-cell-mine-7);
 }
 
 .cell__revealed[data-mines="8"] {
-	background-position: -119px -68px;
+	background-position: var(--sprite-cell-mine-8);
 }

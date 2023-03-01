@@ -1,4 +1,5 @@
 @import "./styles/preflight.css";
+@import "./styles/sprite.css";
 
 :root {
 	--border-inner: #7b7b7b #fff #fff #7b7b7b;
@@ -21,7 +22,7 @@ body {
 	gap: 8px;
 
 	padding: 8px;
-	border: 2px solid;
+	border: 3px solid;
 	border-color: var(--border-outer);
 }
 

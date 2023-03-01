@@ -2,6 +2,6 @@
 	display: grid;
 	grid-template-columns: repeat(var(--size), 1fr);
 
-	border: 2px solid;
+	border: 3px solid;
 	border-color: var(--border-inner);
 }
