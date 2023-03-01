@@ -1,7 +1,7 @@
 .button {
 	width: 26px;
 	height: 26px;
-	background-image: url("/sprite.png");
+	background-image: url("../assets//sprite.png");
 	overflow: hidden;
 
 	background-position: var(--sprite-smile);

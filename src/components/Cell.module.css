@@ -1,7 +1,7 @@
 .cell {
 	width: 16px;
 	height: 16px;
-	background: url("/sprite.png");
+	background-image: url("../assets//sprite.png");
 	overflow: hidden;
 }
 

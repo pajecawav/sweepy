@@ -5,7 +5,7 @@
 .count [data-digit] {
 	width: 13px;
 	height: 23px;
-	background-image: url("/sprite.png");
+	background-image: url("../assets//sprite.png");
 	overflow: hidden;
 }
 
