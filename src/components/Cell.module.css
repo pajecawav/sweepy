@@ -1,0 +1,62 @@
+.cell {
+	aspect-ratio: 1 / 1;
+	width: 16px;
+	background: url("/sprite.png");
+	overflow: hidden;
+}
+
+.cell__hidden {
+	background-position: 0 -51px;
+}
+
+.cell__flagged {
+	background-position: -34px -51px;
+}
+
+.cell__flaggedInvalid {
+	background-position: -119px -51px;
+}
+
+.cell__mine {
+	background-position: -85px -51px;
+}
+
+.cell__final {
+	background-position: -102px -51px;
+}
+
+.cell__revealed[data-mines="0"] {
+	background-position: -17px -51px;
+}
+
+.cell__revealed[data-mines="1"] {
+	background-position: -0px -68px;
+}
+
+.cell__revealed[data-mines="2"] {
+	background-position: -17px -68px;
+}
+
+.cell__revealed[data-mines="3"] {
+	background-position: -34px -68px;
+}
+
+.cell__revealed[data-mines="4"] {
+	background-position: -51px -68px;
+}
+
+.cell__revealed[data-mines="5"] {
+	background-position: -68px -68px;
+}
+
+.cell__revealed[data-mines="6"] {
+	background-position: -85px -68px;
+}
+
+.cell__revealed[data-mines="7"] {
+	background-position: -102px -68px;
+}
+
+.cell__revealed[data-mines="8"] {
+	background-position: -119px -68px;
+}

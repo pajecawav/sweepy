@@ -1,0 +1,20 @@
+.button {
+	width: 26px;
+	height: 26px;
+	background-image: url("/sprite.png");
+	overflow: hidden;
+
+	background-position: 0 -24px;
+}
+
+.button:active {
+	background-position: -54px -24px;
+}
+
+.button__completed {
+	background-position: -81px -24px;
+}
+
+.button__failed {
+	background-position: -108px -24px;
+}
