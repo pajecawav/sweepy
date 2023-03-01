@@ -17,6 +17,10 @@
 	background-position: var(--sprite-cell-flaggedInvalid);
 }
 
+.cell__questioned {
+	background-position: var(--sprite-cell-questioned);
+}
+
 .cell__mine {
 	background-position: var(--sprite-cell-mine);
 }

@@ -2,7 +2,7 @@ import { makeAutoObservable } from "mobx";
 import { GRID_SIZE, INITIAL_MINES_COUNT } from "./config";
 import { iterDeltas, randint } from "./utils";
 
-export type ICellState = "hidden" | "flagged" | "revealed";
+export type ICellState = "hidden" | "flagged" | "questioned" | "revealed";
 
 export interface ICell {
 	state: ICellState;
@@ -110,7 +110,7 @@ export class Game {
 		}
 	}
 
-	toggleFlagged(x: number, y: number) {
+	toggleCellState(x: number, y: number) {
 		if (this.state !== "playing") {
 			return;
 		}
@@ -125,6 +125,8 @@ export class Game {
 		if (cell.state === "hidden") {
 			cell.state = "flagged";
 		} else if (cell.state === "flagged") {
+			cell.state = "questioned";
+		} else if (cell.state === "questioned") {
 			cell.state = "hidden";
 		}
 	}

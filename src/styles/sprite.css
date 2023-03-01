@@ -18,6 +18,7 @@
 	--sprite-cell-hidden: 0 -51px;
 	--sprite-cell-flagged: -34px -51px;
 	--sprite-cell-flaggedInvalid: -119px -51px;
+	--sprite-cell-questioned: -51px -51px;
 	--sprite-cell-mine: -85px -51px;
 	--sprite-cell-mine-final: -102px -51px;
 	--sprite-cell-mine-0: -17px -51px;

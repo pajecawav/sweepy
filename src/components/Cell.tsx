@@ -20,6 +20,9 @@ export const Cell = observer(function Cell({ x, y, cell }: CellProps) {
 		case "flagged":
 			className = styles.cell__flagged;
 			break;
+		case "questioned":
+			className = styles.cell__questioned;
+			break;
 		case "revealed": {
 			if (cell.isMine) {
 				className = styles.cell__mine;
@@ -46,7 +49,7 @@ export const Cell = observer(function Cell({ x, y, cell }: CellProps) {
 		if (event.button === 0) {
 			game.revealCell(x, y);
 		} else if (event.button === 2) {
-			game.toggleFlagged(x, y);
+			game.toggleCellState(x, y);
 		}
 	}
 
