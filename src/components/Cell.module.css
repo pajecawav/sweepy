@@ -8,6 +8,9 @@
 .cell__hidden {
 	background-position: var(--sprite-cell-hidden);
 }
+.cell__hidden:active {
+	background-position: var(--sprite-cell-mine-0);
+}
 
 .cell__flagged {
 	background-position: var(--sprite-cell-flagged);

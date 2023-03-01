@@ -1,6 +1,6 @@
 import { makeAutoObservable } from "mobx";
-import { GRID_SIZE, INITIAL_MINES_COUNT } from "./config";
-import { iterDeltas, randint } from "./utils";
+import { GRID_SIZE, INITIAL_MINES_COUNT } from "../config";
+import { iterDeltas, randint } from "../utils";
 
 export type ICellState = "hidden" | "flagged" | "questioned" | "revealed";
 

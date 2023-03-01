@@ -1,5 +1,6 @@
 import { observer } from "mobx-react-lite";
-import { game } from "../game";
+import { game } from "../stores/game";
+import { pointer } from "../stores/pointer";
 import { cn } from "../utils";
 import styles from "./ControlButton.module.css";
 
@@ -13,6 +14,10 @@ export const ControlButton = observer(function ControlButton() {
 		case "failed":
 			className = styles.button__failed;
 			break;
+	}
+
+	if (pointer.pressed) {
+		className = styles.button__pressed;
 	}
 
 	function handleClick() {

@@ -1,6 +1,6 @@
 import { observer } from "mobx-react-lite";
 import { MouseEvent } from "react";
-import { game, ICell } from "../game";
+import { game, ICell } from "../stores/game";
 import { cn } from "../utils";
 import styles from "./Cell.module.css";
 

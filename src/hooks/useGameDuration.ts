@@ -1,4 +1,4 @@
-import { Game } from "../game";
+import { Game } from "../stores/game";
 import { useNow } from "./useNow";
 
 export function useGameDuration(game: Game) {

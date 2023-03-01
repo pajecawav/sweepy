@@ -8,6 +8,10 @@
 }
 
 .button:active {
+	background-position: var(--sprite-smile-pressed);
+}
+
+.button__pressed {
 	background-position: var(--sprite-smile-wow);
 }
 

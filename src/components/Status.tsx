@@ -1,5 +1,5 @@
 import { observer } from "mobx-react-lite";
-import { game } from "../game";
+import { game } from "../stores/game";
 import { ControlButton } from "./ControlButton";
 import { Count } from "./Count";
 import styles from "./Status.module.css";
