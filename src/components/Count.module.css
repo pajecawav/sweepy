@@ -1,5 +1,8 @@
+.count {
+	display: flex;
+}
+
 .count [data-digit] {
-	display: inline-block;
 	width: 13px;
 	height: 23px;
 	background-image: url("/sprite.png");
