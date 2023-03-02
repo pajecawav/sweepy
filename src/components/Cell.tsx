@@ -1,5 +1,4 @@
 import { observer } from "mobx-react-lite";
-import { MouseEvent } from "react";
 import { game, ICell } from "../stores/game";
 import { cn } from "../utils";
 import styles from "./Cell.module.css";
@@ -43,22 +42,19 @@ export const Cell = observer(function Cell({ x, y, cell }: CellProps) {
 		}
 	}
 
-	function handleClick(event: MouseEvent<HTMLButtonElement>) {
-		event.preventDefault();
-
-		if (event.button === 0) {
-			game.revealCell(x, y);
-		} else if (event.button === 2) {
-			game.toggleCellState(x, y);
-		}
-	}
-
 	return (
 		<button
 			className={cn(styles.cell, className)}
 			data-mines={cell.minesCount}
-			onClick={handleClick}
-			onContextMenu={handleClick}
+			onClick={() => game.revealCell(x, y)}
+			onContextMenu={event => {
+				event.preventDefault();
+				if ("vibrate" in navigator) {
+					// audio/vibration cue for mobile users
+					navigator.vibrate(100);
+				}
+				game.toggleCellState(x, y);
+			}}
 		/>
 	);
 });
