@@ -8,6 +8,7 @@ export interface ICell {
 	state: ICellState;
 	isMine: boolean;
 	isFinal: boolean;
+	isChorded: boolean; // https://www.minesweeper.info/wiki/Chord
 	minesCount: number;
 }
 
@@ -131,6 +132,41 @@ export class Game {
 		}
 	}
 
+	chordCell(x: number, y: number) {
+		const cell = this.grid[y]?.[x];
+
+		if (!cell || cell.state !== "revealed" || this.state !== "playing") {
+			return;
+		}
+
+		cell.isChorded = true;
+
+		for (const [adj] of Game.iterNeighbors(this.grid, x, y)) {
+			adj.isChorded = true;
+		}
+	}
+
+	unchordCell(x: number, y: number) {
+		for (const cell of Game.iterCells(this.grid)) {
+			cell.isChorded = false;
+		}
+
+		const cell = this.grid[y]?.[x];
+		const canChord =
+			cell &&
+			cell.state === "revealed" &&
+			cell.minesCount &&
+			cell.minesCount === this.countNeighborFlags(this.grid, x, y);
+
+		if (!canChord) {
+			return;
+		}
+
+		for (const [, nx, ny] of Game.iterNeighbors(this.grid, x, y)) {
+			this.revealCell(nx, ny);
+		}
+	}
+
 	private startTimer() {
 		this.startedAt ??= Date.now();
 	}
@@ -168,6 +204,7 @@ export class Game {
 					state: "hidden",
 					isMine: false,
 					isFinal: false,
+					isChorded: false,
 					minesCount: 0,
 				});
 			}
@@ -208,6 +245,18 @@ export class Game {
 		}
 
 		return mines;
+	}
+
+	private countNeighborFlags(grid: IGrid, x: number, y: number): number {
+		let flags = 0;
+
+		for (const [cell] of Game.iterNeighbors(grid, x, y)) {
+			if (cell.state === "flagged") {
+				flags++;
+			}
+		}
+
+		return flags;
 	}
 
 	private static *iterNeighbors(

@@ -32,6 +32,10 @@
 	background-position: var(--sprite-cell-mine-final);
 }
 
+.cell__chorded {
+	background-position: var(--sprite-cell-mine-0);
+}
+
 .cell__revealed[data-mines="0"] {
 	background-position: var(--sprite-cell-mine-0);
 }

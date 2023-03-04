@@ -14,7 +14,11 @@ export const Cell = observer(function Cell({ x, y, cell }: CellProps) {
 
 	switch (cell.state) {
 		case "hidden":
-			className = styles.cell__hidden;
+			if (cell.isChorded) {
+				className = styles.cell__chorded;
+			} else {
+				className = styles.cell__hidden;
+			}
 			break;
 		case "flagged":
 			className = styles.cell__flagged;
@@ -55,6 +59,8 @@ export const Cell = observer(function Cell({ x, y, cell }: CellProps) {
 				}
 				game.toggleCellState(x, y);
 			}}
+			onPointerDown={() => game.chordCell(x, y)}
+			onPointerUp={() => game.unchordCell(x, y)}
 		/>
 	);
 });
